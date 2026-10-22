@@ -1,0 +1,20 @@
+{
+  "name": "chat-application",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": ["apps/web", "apps/api", "packages/shared"],
+  "scripts": {
+    "dev:web": "npm run dev --workspace=@chat/web",
+    "dev:api": "npm run start:dev --workspace=@chat/api",
+    "build:web": "npm run build --workspace=@chat/web",
+    "build:api": "npm run build --workspace=@chat/api",
+    "db:generate": "npm run db:generate --workspace=@chat/api",
+    "db:migrate": "npm run db:migrate --workspace=@chat/api",
+    "db:studio": "npm run db:studio --workspace=@chat/api"
+  },
+  "overrides": {
+    "next": {
+      "postcss": "8.5.23"
+    }
+  }
+}
